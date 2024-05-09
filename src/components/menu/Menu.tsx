@@ -1,33 +1,34 @@
 import React from 'react'
+import { NavLink as BaseNavLink } from "react-router-dom";
 import styled from 'styled-components';
 
-export const Menu = () => {
+type MenuPropsType = {
+  path: string;
+  name: string;
+};
+
+export const Menu = (props: MenuPropsType) => {
+  const { path, name } = props; 
   return (
-    <StyledMenu>
-      <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">About</a>
-        </li>
-        <li>
-          <a href="">Tech Stack</a>
-        </li>
-        <li>
-          <a href="">Projects</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
-        </li>
-      </ul>
-    </StyledMenu>
+    <NavLink to={path}>
+      {name}
+    </NavLink>
   );
 }
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 50px;
+const NavLink = styled(BaseNavLink)`
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #000;
+  gap: 50px;
+  transition: .3s;
+  &:hover {
+    color: #071ef5;
+    border-bottom: 2px solid #071ef5;
   }
-`
+  &.active {
+    color: #b314e4;
+  }
+`;
