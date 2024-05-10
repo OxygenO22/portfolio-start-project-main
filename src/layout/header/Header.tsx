@@ -7,11 +7,11 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Logo />
-      {
-        MenuData.map((data) => (
-          <Menu key={data.id} path={data.path} name={data.name}/>
-        ))
-      }
+      <MenuWrapper>
+        {MenuData.map((data) => (
+          <Menu key={data.id} path={data.path} name={data.name} />
+        ))}
+      </MenuWrapper>
     </StyledHeader>
   );
 }
@@ -20,4 +20,13 @@ const StyledHeader = styled.header`
   background: #41c720;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `
+
+const MenuWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+`;

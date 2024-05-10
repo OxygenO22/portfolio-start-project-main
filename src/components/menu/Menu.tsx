@@ -20,13 +20,13 @@ const NavLink = styled(BaseNavLink)`
   display: flex;
   align-items: center;
   font-size: 1.1em;
+  font-weight: 500;
+  line-height: 26px;
   text-decoration: none;
-  color: #000;
-  gap: 50px;
-  transition: .3s;
+  color: #666666;
+  transition: 0.3s;
   &:hover {
     color: #071ef5;
-    border-bottom: 2px solid #071ef5;
   }
   &.active {
     color: #b314e4;
