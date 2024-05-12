@@ -53,6 +53,5 @@ const SocialWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
   height: 100%;
 `;
