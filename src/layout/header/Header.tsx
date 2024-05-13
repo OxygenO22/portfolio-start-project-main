@@ -41,7 +41,7 @@ const MenuSocialWrapper = styled.div`
 
 const MenuWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 90%;
   height: 100%;

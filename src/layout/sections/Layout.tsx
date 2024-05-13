@@ -19,9 +19,9 @@ const StyledLayout = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 100vh;
-  background: #eb9d9d;
-  overflow: hidden;
+  height: 100%;
+  background: rgb(214, 156, 30);
+  overflow-x: hidden;
 `;
 
 const StyledLayoutInner = styled.div`
@@ -30,6 +30,5 @@ const StyledLayoutInner = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  height: 100vh;
-  background: #bdbcbc;
+  background: #ffffff;
 `;
