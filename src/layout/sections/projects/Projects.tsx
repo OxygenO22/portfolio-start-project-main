@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 import { PageTile } from '../../../components/ui/pageTitle/PageTile';
+import { ProjectCard } from './ProjectCard';
 
 export const Projects = () => {
   return (
     <StyledSection>
       <PageTile page="Projects" />
+      <CardWrapper>
+        <ProjectCard />
+      </CardWrapper>
     </StyledSection>
   );
 }
@@ -16,6 +20,16 @@ const StyledSection = styled.section`
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin-top: 160px;
 `;
+
+const CardWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 34px;
+  margin: 110px 0 136px 0;
+`

@@ -20,7 +20,6 @@ const StyledLayout = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  background: rgb(214, 156, 30);
   overflow-x: hidden;
 `;
 
@@ -29,6 +28,7 @@ const StyledLayoutInner = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   background: #ffffff;
+  padding: 0 10px 0 10px;
 `;

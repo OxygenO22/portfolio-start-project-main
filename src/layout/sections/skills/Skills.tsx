@@ -10,7 +10,9 @@ export const Skills = () => {
       <PageTile page="Skills" />
       <StyledArticle>
         {SkillsData.map((data) => (
-          <SkillsSvgSelector key={data.id} icon={data.icon} />
+          <SvgWrapper key={data.id}>
+            <SkillsSvgSelector icon={data.icon} />
+          </SvgWrapper>
         ))}
       </StyledArticle>
     </StyledSection>
@@ -23,16 +25,24 @@ const StyledSection = styled.section`
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  height: 100vh;
-  margin-top: 146px;
+  height: 100%;
+  margin: 146px 0 160px 0;
 `;
 
 const StyledArticle = styled.article`
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 200px;
-  gap: 110px
+  gap: 120px;
+`
+
+const SvgWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 120px;
 `
