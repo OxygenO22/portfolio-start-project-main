@@ -29,6 +29,8 @@ const NavLink = styled(BaseNavLink)`
     color: #071ef5;
   }
   &.active {
-    color: #b314e4;
+    background: linear-gradient(to right, #00c0fd, #e70faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;

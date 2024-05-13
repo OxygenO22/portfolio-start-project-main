@@ -4,38 +4,31 @@ import { AboutTitle } from './AboutTitle';
 import { AboutArticleData } from "./AboutArticleData";
 import styled from 'styled-components';
 import { ReactComponent as WallSvg } from "../../../assets/images/svg/aboutPage/wall.svg";
+import { PageTile } from '../../../components/ui/pageTitle/PageTile';
 
 export const About = () => {
   return (
     <StyledSection>
       <InfoColumn>
-        {AboutArticleData.map((props) =>
-          props.aboutMe ? (
-            <StyledArticle key={props.id}>
-              <AboutTitle title={props.title} />
-              {props.aboutMe.map((props) => (
-                <StyledText key={props.id}>{props.text}</StyledText>
-              ))}
-            </StyledArticle>
-          ) : (
-            <StyledArticle key={props.id}>
-              <AboutTitle title={props.title} />
-              {props.experience.map((props) => (
-                <AboutExperienceItem
-                  key={props.id}
-                  title={props.title}
-                  classes={props.classes}
-                  classesType={props.classesType}
-                  place={props.place}
-                  data={props.data}
-                />
-              ))}
-            </StyledArticle>
-          )
-        )}
+        <PageTile page="About" />
+        {AboutArticleData.map((props) => (
+          <StyledArticle key={props.id}>
+            <AboutTitle title={props.title} />
+            {props.experience.map((props) => (
+              <AboutExperienceItem
+                key={props.id}
+                title={props.title}
+                classes={props.classes}
+                classesType={props.classesType}
+                place={props.place}
+                data={props.data}
+              />
+            ))}
+          </StyledArticle>
+        ))}
       </InfoColumn>
       <PictureColumn>
-          <WallSvg />
+        <WallSvg />
       </PictureColumn>
     </StyledSection>
   );
@@ -66,10 +59,10 @@ const StyledArticle = styled.article`
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  margin-bottom: 34px;
+  margin: 34px 0 34px 0;
 
   &:last-child {
-    margin-bottom: 0;
+    margin: 0;
   }
 `
 

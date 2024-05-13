@@ -1,13 +1,13 @@
 import React from 'react'
-import { ReactComponent as GitHub } from "../../assets/images/svg/Github.svg";
-import { ReactComponent as Twitter } from "../../assets/images/svg/Twitter.svg";
-import { ReactComponent as Linkedin } from "../../assets/images/svg/Linkedin.svg";
+import { ReactComponent as GitHub } from "../../assets/images/svg/socialMedia/Github.svg";
+import { ReactComponent as Twitter } from "../../assets/images/svg/socialMedia/Twitter.svg";
+import { ReactComponent as Linkedin } from "../../assets/images/svg/socialMedia/Linkedin.svg";
 
-type Props = {
+type PropsType = {
   icon: string;
 };
 
-export const SvgSelector = ({ icon }: Props) => {
+export const SvgSelector = ({ icon }: PropsType) => {
   switch (icon) {
     case "github":
       return <GitHub />;

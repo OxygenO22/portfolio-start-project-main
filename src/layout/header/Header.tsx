@@ -28,7 +28,7 @@ const StyledHeader = styled.header`
   align-items: center;
   width: 100%;
   height: 60px;
-  margin-top: 80px;
+  margin-top: 70px;
 `
 
 const MenuSocialWrapper = styled.div`
