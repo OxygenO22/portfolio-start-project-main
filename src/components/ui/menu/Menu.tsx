@@ -1,18 +1,19 @@
 import React from 'react'
 import { NavLink as BaseNavLink } from "react-router-dom";
 import styled from 'styled-components';
+import { MenuData } from './MenuData';
 
 type MenuPropsType = {
-  path: string;
-  name: string;
+  place: 'Header' | 'Footer';
 };
 
 export const Menu = (props: MenuPropsType) => {
-  const { path, name } = props; 
   return (
-    <NavLink to={path}>
-      {name}
-    </NavLink>
+    <>
+      {MenuData.map((data) => (
+        <NavLink key={data.id} to={data.path}>{props.place === 'Header' ? data.name : data.namefooter}</NavLink>
+      ))}
+    </>
   );
 }
 

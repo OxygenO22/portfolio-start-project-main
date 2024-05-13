@@ -1,18 +1,15 @@
 import styled from 'styled-components';
-import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
-import { MenuData } from '../../components/menu/MenuData';
+import { Logo } from '../../components/ui/logo/Logo';
+import { Menu } from '../../components/ui/menu/Menu';
 import { SocialMedia } from '../../components/ui/socialMedia/SocialMedia';
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
+      <Logo place="Header" />
       <MenuSocialWrapper>
         <MenuWrapper>
-          {MenuData.map((data) => (
-            <Menu key={data.id} path={data.path} name={data.name} />
-          ))}
+          <Menu place="Header" />
         </MenuWrapper>
         <SocialWrapper>
           <SocialMedia />

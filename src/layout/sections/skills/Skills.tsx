@@ -32,6 +32,7 @@ const StyledArticle = styled.article`
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
   margin-top: 200px;
   gap: 110px
 `
