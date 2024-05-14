@@ -11,7 +11,9 @@ export const Skills = () => {
       <StyledArticle>
         {SkillsData.map((data) => (
           <SvgWrapper key={data.id}>
-            <SkillsSvgSelector icon={data.icon} />
+            <SvgInner>
+              <SkillsSvgSelector icon={data.icon} />
+            </SvgInner>
           </SvgWrapper>
         ))}
       </StyledArticle>
@@ -40,9 +42,23 @@ const StyledArticle = styled.article`
 `
 
 const SvgWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100px;
   height: 120px;
-`
+`;
+
+const SvgInner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  &:hover {
+    position: absolute;
+    transform: translate(-2px, -2px);
+  }
+`;

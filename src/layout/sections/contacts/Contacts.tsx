@@ -9,7 +9,7 @@ export const Contacts = () => {
     <StyledSection>
       <StyledMailArticle>
         <Title>For any questions please mail me:</Title>
-        <MailText>hi@pavanmg.in</MailText>
+        <MailText>bamaikoxygeno22@gmail.com</MailText>
       </StyledMailArticle>
       <StyledFooterArticle>
         <ContactsWrapper>
@@ -17,12 +17,10 @@ export const Contacts = () => {
             <Logo place="Footer" />
           </LogoWrapper>
           <ContactsInfo>
-            <ContactsLink href="#">
-              <ContactsText>+91 12345 09876</ContactsText>
+            <ContactsLink href="tel:+375(29)281-68-71" target="_blank">
+              <ContactsText>+375(29)281-68-71</ContactsText>
             </ContactsLink>
-            <ContactsLink href="#">
-              <ContactsText>info@example.com</ContactsText>
-            </ContactsLink>
+            <ContactsText>bamaikoxygeno22@gmail.com</ContactsText>
           </ContactsInfo>
           <SocialMedia />
         </ContactsWrapper>
@@ -31,7 +29,7 @@ export const Contacts = () => {
             <Menu place="Footer" />
           </MenuWrapper>
           <ContactsText>
-            Designed and built by <ColoredSpan>Pavan MG</ColoredSpan> with{" "}
+            Designed and built by <ColoredSpan>Alex Budzko</ColoredSpan> with{" "}
             <ColoredSpan>Love</ColoredSpan> & <ColoredSpan>Coffee</ColoredSpan>
           </ContactsText>
         </NavigationWrapper>
@@ -67,7 +65,11 @@ const Title = styled.h2`
   color: #1e0e62;
 `;
 
-const MailText = styled(Title)`
+const MailText = styled.p`
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 70px;
+  letter-spacing: -1px;
   background: linear-gradient(to right, #00c0fd, #e70faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

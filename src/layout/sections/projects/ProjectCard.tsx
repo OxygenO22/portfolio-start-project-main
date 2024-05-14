@@ -17,25 +17,24 @@ export const ProjectCard = () => {
               <Title>{data.title}</Title>
             </TitleWrapper>
             <MainTextWrapper>
-              <MainText>
-                {data.mainText}
-              </MainText>
+              <MainText>{data.mainText}</MainText>
             </MainTextWrapper>
             <TechStackTextWrapper>
               <TechStackText>
-                <TechStackTextSpan>{data.stackSpanText}</TechStackTextSpan> {data.stackText}
+                <TechStackTextSpan>{data.stackSpanText}</TechStackTextSpan>{" "}
+                {data.stackText}
               </TechStackText>
             </TechStackTextWrapper>
             <LinkBlockWrapper>
               <LinkWrapper>
                 <ChainSvg />
-                <StyledLink href={data.chainLink}>
+                <StyledLink href={data.chainLink} target="_blank">
                   <LinkText>{data.chainLinkText}</LinkText>
                 </StyledLink>
               </LinkWrapper>
               <LinkWrapper>
                 <GitHubSvg />
-                <StyledLink href={data.githubLink}>
+                <StyledLink href={data.githubLink} target="_blank">
                   <LinkText>{data.githubLinkText}</LinkText>
                 </StyledLink>
               </LinkWrapper>
@@ -56,7 +55,10 @@ const StyledArticle = styled.article`
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: .3s;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
 `;
 
 const PictureWrapper = styled.div`

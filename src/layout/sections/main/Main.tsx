@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components';
-import photo from "../../../assets/images/pictures/myPhoto.webp";
+import photo from "../../../assets/images/pictures/AlexPhoto.webp";
 import photoBackground from '../../../assets/images/svg/photo-background.svg'
 
 export const Main = () => {
   return (
     <StyledSection>
-      <div>
+      <TextWrapper>
         <StyledTitle>Hi 👋,</StyledTitle>
         <StyledTitle> My name is</StyledTitle>
-        <StyledTitleName>Pavan MG</StyledTitleName>
+        <StyledTitleName>
+          <TitleNameLink
+            href="https://www.linkedin.com/in/alexandr-budzko-823443218/"
+            target="_blank"
+          >
+            Alex Budzko
+          </TitleNameLink>
+        </StyledTitleName>
         <StyledTitle as="h1">I build things for web</StyledTitle>
-      </div>
+      </TextWrapper>
       <MyPhotoWrapper>
         <StyledPhotoBackgr src={photoBackground} alt="Photo background" />
         <MyPhoto src={photo} alt="My photo" />
@@ -26,6 +33,25 @@ const StyledSection = styled.section`
   justify-content: space-between;
   width: 100%;
   height: 100vh;
+
+  @media (${({theme}) => theme.media.medium}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+   @media (${({theme}) => theme.media.medium}) {
+    align-items: center;
+  }
 `;
 
 const StyledTitle = styled.h2`
@@ -35,6 +61,10 @@ const StyledTitle = styled.h2`
   letter-spacing: -1px;
   color: #42446e;
 `;
+
+const TitleNameLink = styled.a`
+  text-decoration: none;
+`
 
 const StyledTitleName = styled(StyledTitle)`
   background: linear-gradient(to right, #00c0fd, #e70faa);
@@ -48,7 +78,9 @@ const MyPhotoWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 350px;
+  min-width: 350px;
   height: 350px;
+  min-height: 350px;
   background: linear-gradient(#e70faa, #00c0fd);
   border-radius: 50%;
 `;
