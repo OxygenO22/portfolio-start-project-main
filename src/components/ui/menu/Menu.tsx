@@ -2,17 +2,34 @@ import React from 'react'
 import { NavLink as BaseNavLink } from "react-router-dom";
 import styled from 'styled-components';
 import { MenuData } from './MenuData';
+import { useAppDispatch, useTypedSelector } from '../../hooks/useTypedSelector';
+import { openCloseBurgerMenu } from '../../../store/burgerMenu/BurgerMenuSlice';
 
 type MenuPropsType = {
-  place: 'Header' | 'Footer';
+  place: 'Header' | 'Footer' | 'BurgerMenu';
 };
 
 export const Menu = (props: MenuPropsType) => {
+  const { isBurgerMenuOpen } = useTypedSelector((state) => state.burgerMenu);
+  const dispatch = useAppDispatch();
+
   return (
     <>
-      {MenuData.map((data) => (
-        <NavLink key={data.id} to={data.path}>{props.place === 'Header' ? data.name : data.namefooter}</NavLink>
-      ))}
+      {MenuData.map((data) =>
+        props.place === "BurgerMenu" ? (
+          <BurgerNavLink
+            key={data.id}
+            to={data.path}
+            onClick={() => dispatch(openCloseBurgerMenu(false))}
+          >
+            {data.name}
+          </BurgerNavLink>
+        ) : (
+          <NavLink key={data.id} to={data.path}>
+            {props.place === "Header" ? data.name : data.namefooter}
+          </NavLink>
+        )
+      )}
     </>
   );
 }
@@ -38,3 +55,12 @@ const NavLink = styled(BaseNavLink)`
     -webkit-text-fill-color: transparent;
   }
 `;
+
+const BurgerNavLink = styled(NavLink)`
+  flex-direction: column;
+  margin-bottom: 30px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 15px;
+`;
+

@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import { Logo } from '../../components/ui/logo/Logo';
 import { Menu } from '../../components/ui/menu/Menu';
 import { SocialMedia } from '../../components/ui/socialMedia/SocialMedia';
+import { useState } from 'react';
+import { BurgerMenuButton } from '../../components/ui/burgerMenuButton/BurgerMenuButton';
 
 export const Header = () => {
+
   return (
     <StyledHeader>
       <Logo place="Header" />
@@ -11,6 +14,7 @@ export const Header = () => {
         <MenuWrapper>
           <Menu place="Header" />
         </MenuWrapper>
+        <BurgerMenuButton />
         <SocialWrapper>
           <SocialMedia />
         </SocialWrapper>
@@ -23,7 +27,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 70px;
   left: 0;
-  z-index: 1000;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,9 +59,18 @@ const MenuWrapper = styled.div`
   height: 100%;
   gap: 50px;
   margin-right: 50px;
+
   @media (${({ theme }) => theme.media.medium}) {
     gap: 30px;
   }
+
+  @media (${({ theme }) => theme.media.small}) {
+    display: none;
+  }
+`;
+
+const MenuMedia = styled.div`
+  
 `;
 
 const SocialWrapper = styled.div`

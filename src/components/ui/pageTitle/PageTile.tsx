@@ -30,12 +30,17 @@ const StyledArticle = styled.article`
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+
+  @media (${({ theme }) => theme.media.small}) {
+    align-items: center;
+  }
 `;
 
 const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   margin-bottom: 30px;
 
   @media (${({ theme }) => theme.media.small}) {

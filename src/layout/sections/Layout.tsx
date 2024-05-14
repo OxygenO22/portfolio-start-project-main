@@ -2,11 +2,16 @@ import React from 'react'
 import { Header } from '../header/Header';
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import { useTypedSelector } from '../../components/hooks/useTypedSelector';
+import { BurgerMenu } from '../../components/ui/burgerMenu/BurgerMenu';
 
 export const Layout = () => {
+  const { isBurgerMenuOpen } = useTypedSelector((state) => state.burgerMenu);
+
   return (
     <StyledLayout>
       <StyledLayoutInner>
+        {isBurgerMenuOpen === true && <BurgerMenu />}
         <Header />
         <Outlet />
       </StyledLayoutInner>
