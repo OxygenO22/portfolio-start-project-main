@@ -35,23 +35,32 @@ export const About = () => {
 }
 
 const StyledSection = styled.section`
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   height: 100vh;
   margin-top: 125px;
-`
+  overflow: hidden;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin-top: 60px;
+    justify-content: center;
+  }
+`;
 
 const InfoColumn = styled.div`
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 60%;
+  width: 100%;
   max-width: 700px;
   height: 100%;
-`
+`;
 
 const StyledArticle = styled.article`
   display: flex;
@@ -64,20 +73,16 @@ const StyledArticle = styled.article`
   &:last-child {
     margin: 0;
   }
-`
-
-const StyledText = styled.p`
-  font-weight: 400;
-  font-size: 1.12rem;
-  line-height: 26px;
-  color: #666666;
 `;
 
 const PictureColumn = styled.div`
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -120px;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  width: 40%;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
 `;

@@ -25,6 +25,9 @@ const NavLink = styled(BaseNavLink)`
   line-height: 26px;
   text-decoration: none;
   color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: 0.3s;
   &:hover {
     color: #071ef5;

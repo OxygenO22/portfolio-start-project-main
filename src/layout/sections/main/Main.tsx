@@ -47,10 +47,10 @@ const TextWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  height: 100%;
 
    @media (${({theme}) => theme.media.medium}) {
     align-items: center;
+    margin-bottom: 60px;
   }
 `;
 

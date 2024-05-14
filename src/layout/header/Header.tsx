@@ -44,6 +44,7 @@ const MenuSocialWrapper = styled.div`
   align-items: center;
   width: 90%;
   height: 100%;
+  margin-left: 20px;
 `;
 
 const MenuWrapper = styled.div`
@@ -54,6 +55,9 @@ const MenuWrapper = styled.div`
   height: 100%;
   gap: 50px;
   margin-right: 50px;
+  @media (${({ theme }) => theme.media.medium}) {
+    gap: 30px;
+  }
 `;
 
 const SocialWrapper = styled.div`

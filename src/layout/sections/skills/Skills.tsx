@@ -29,6 +29,10 @@ const StyledSection = styled.section`
   width: 100%;
   height: 100%;
   margin: 146px 0 160px 0;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin: 60px 0 60px 0;
+  }
 `;
 
 const StyledArticle = styled.article`
@@ -39,7 +43,12 @@ const StyledArticle = styled.article`
   width: 100%;
   margin-top: 200px;
   gap: 120px;
-`
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin-top: 60px;
+    gap: 70px;
+  }
+`;
 
 const SvgWrapper = styled.div`
   position: relative;

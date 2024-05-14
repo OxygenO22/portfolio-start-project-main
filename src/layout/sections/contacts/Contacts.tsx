@@ -17,10 +17,10 @@ export const Contacts = () => {
             <Logo place="Footer" />
           </LogoWrapper>
           <ContactsInfo>
-            <ContactsLink href="tel:+375(29)281-68-71" target="_blank">
-              <ContactsText>+375(29)281-68-71</ContactsText>
-            </ContactsLink>
-            <ContactsText>bamaikoxygeno22@gmail.com</ContactsText>
+              <ContactsLink href="tel:+375(29)281-68-71" target="_blank">
+                <ContactsText>+375(29)281-68-71</ContactsText>
+              </ContactsLink>
+              <ContactsText>bamaikoxygeno22@gmail.com</ContactsText>
           </ContactsInfo>
           <SocialMedia />
         </ContactsWrapper>
@@ -63,6 +63,14 @@ const Title = styled.h2`
   line-height: 70px;
   letter-spacing: -1px;
   color: #1e0e62;
+
+  @media (${({ theme }) => theme.media.large}) {
+    font-size: 2.6rem;
+  }
+
+  @media (${({ theme }) => theme.media.medium}) {
+    font-size: 2.6rem;
+  }
 `;
 
 const MailText = styled.p`
@@ -73,6 +81,14 @@ const MailText = styled.p`
   background: linear-gradient(to right, #00c0fd, #e70faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (${({ theme }) => theme.media.large}) {
+    font-size: 2.6rem;
+  }
+
+  @media (${({ theme }) => theme.media.medium}) {
+    font-size: 2.6rem;
+  }
 `;
 
 const StyledFooterArticle = styled.article`
@@ -101,12 +117,22 @@ const LogoWrapper = styled.div`
   width: 10%;
 `;
 
-const ContactsInfo = styled(LogoWrapper)`
+const ContactsInfo = styled.div`
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
   width: 80%;
   margin-right: 40px;
   gap: 33px;
-`
+
+  @media (${({ theme }) => theme.media.medium}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 40px;
+    gap: 0;
+  }
+`;
 
 const ContactsLink = styled.a`
   text-decoration: none;
@@ -122,6 +148,11 @@ const MenuWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 50px;
+  margin-right: 50px;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin-right: 0;
+  }
 `;
 
 const ContactsText = styled.p`
@@ -136,6 +167,12 @@ const NavigationWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 const ColoredSpan = styled.span`
