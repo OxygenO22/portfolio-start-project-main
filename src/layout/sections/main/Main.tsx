@@ -32,7 +32,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   @media (${({theme}) => theme.media.medium}) {
     flex-direction: column;
@@ -60,6 +60,16 @@ const StyledTitle = styled.h2`
   line-height: 70px;
   letter-spacing: -1px;
   color: #42446e;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    font-size: 2.6rem;
+    line-height: 50px;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    font-size: 2.6rem;
+    line-height: 50px;
+  }
 `;
 
 const TitleNameLink = styled.a`

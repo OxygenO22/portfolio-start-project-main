@@ -1,13 +1,28 @@
 import 'styled-components';
 
-import { ITheme } from './interfaces/styled';
+interface ITheme {
+
+  media: {
+    large: string
+    medium: string
+    small: string
+  },
+
+  mediaHeight: {
+      small: string
+    },
+}
 
 declare module 'styled-components' {
   export interface DefaultTheme extends ITheme {
     media: {
-    large: string
-    medium: string
-    small: string
-  }
+      large: string
+      medium: string
+      small: string
+    },
+
+    mediaHeight: {
+      small: string
+    },
   }
 }

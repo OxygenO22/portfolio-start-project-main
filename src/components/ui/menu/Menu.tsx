@@ -59,8 +59,8 @@ const NavLink = styled(BaseNavLink)`
 const BurgerNavLink = styled(NavLink)`
   flex-direction: column;
   margin-bottom: 30px;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  padding: 15px;
+  padding: 6px;
 `;
 

@@ -27,7 +27,9 @@ const StyledSection = styled.section`
     margin-top: 60px;
   }
 
-  
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    margin-top: 60px;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -40,6 +42,10 @@ const CardWrapper = styled.div`
   margin: 110px 0 136px 0;
 
   @media (${({ theme }) => theme.media.medium}) {
+    margin: 60px 0 60px 0;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
     margin: 60px 0 60px 0;
   }
 

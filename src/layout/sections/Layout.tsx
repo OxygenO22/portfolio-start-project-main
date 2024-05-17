@@ -1,15 +1,19 @@
 import React from 'react'
 import { Header } from '../header/Header';
 import { Outlet } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useTypedSelector } from '../../components/hooks/useTypedSelector';
 import { BurgerMenu } from '../../components/ui/burgerMenu/BurgerMenu';
+
+type StyledLayoutPropsType = {
+  isBurger: boolean;
+};
 
 export const Layout = () => {
   const { isBurgerMenuOpen } = useTypedSelector((state) => state.burgerMenu);
 
   return (
-    <StyledLayout>
+    <StyledLayout isBurger={isBurgerMenuOpen}>
       <StyledLayoutInner>
         {isBurgerMenuOpen === true && <BurgerMenu />}
         <Header />
@@ -19,7 +23,7 @@ export const Layout = () => {
   );
 }
 
-const StyledLayout = styled.div`
+const StyledLayout = styled.div<StyledLayoutPropsType>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,6 +31,12 @@ const StyledLayout = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+
+  ${(props) =>
+    props.isBurger === true &&
+    css<StyledLayoutPropsType>`
+      overflow: hidden;
+    `}
 `;
 
 const StyledLayoutInner = styled.div`

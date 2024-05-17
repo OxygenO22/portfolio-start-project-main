@@ -40,13 +40,17 @@ const StyledSection = styled.section`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin-top: 125px;
   overflow: hidden;
 
   @media (${({ theme }) => theme.media.medium}) {
     margin-top: 60px;
     justify-content: center;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    margin-top: 60px;
   }
 `;
 

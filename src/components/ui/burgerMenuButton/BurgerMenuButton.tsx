@@ -21,8 +21,7 @@ const StyledButton = styled.button`
   padding: 5px 20px;
   border: none;
   background: transparent;
-  border-radius: 20px;
-  margin-right: 40px;
+  border-radius: 10px;
   box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: 0.3s;

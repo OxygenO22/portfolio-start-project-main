@@ -40,6 +40,16 @@ const StyledHeader = styled.header`
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   padding: 5px;
+
+  @media (${({ theme }) => theme.media.small}) {
+    top: 20px;
+    margin-top: 20px;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    top: 20px;
+    margin-top: 20px;
+  }
 `;
 
 const MenuSocialWrapper = styled.div`
@@ -69,13 +79,13 @@ const MenuWrapper = styled.div`
   }
 `;
 
-const MenuMedia = styled.div`
-  
-`;
-
 const SocialWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  @media (${({ theme }) => theme.media.small}) {
+    display: none;
+  }
 `;

@@ -33,6 +33,10 @@ const StyledSection = styled.section`
   @media (${({ theme }) => theme.media.medium}) {
     margin: 60px 0 60px 0;
   }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    margin: 60px 0 60px 0;
+  }
 `;
 
 const StyledArticle = styled.article`
@@ -45,6 +49,11 @@ const StyledArticle = styled.article`
   gap: 120px;
 
   @media (${({ theme }) => theme.media.medium}) {
+    margin-top: 60px;
+    gap: 70px;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
     margin-top: 60px;
     gap: 70px;
   }

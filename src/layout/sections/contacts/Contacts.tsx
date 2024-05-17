@@ -46,6 +46,14 @@ const StyledSection = styled.section`
   width: 100%;
   height: 100%;
   margin-top: 200px;
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin-top: 60px;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    margin-top: 60px;
+  }
 `;
 
 const StyledMailArticle = styled.article`
@@ -55,7 +63,14 @@ const StyledMailArticle = styled.article`
   justify-content: flex-start;
   width: 100%;
   margin-bottom: 295px;
-`
+
+  @media (${({ theme }) => theme.media.medium}) {
+    margin-bottom: 60px;
+  }
+  @media (${({ theme }) => theme.mediaHeight.small}) {
+    margin-bottom: 60px;
+  }
+`;
 
 const Title = styled.h2`
   font-weight: 700;
@@ -115,6 +130,10 @@ const LogoWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 10%;
+
+  @media (${({ theme }) => theme.media.small}) {
+    display: none;
+  }
 `;
 
 const ContactsInfo = styled.div`
@@ -126,6 +145,14 @@ const ContactsInfo = styled.div`
   gap: 33px;
 
   @media (${({ theme }) => theme.media.medium}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 40px;
+    gap: 0;
+  }
+
+  @media (${({ theme }) => theme.mediaHeight.small}) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
