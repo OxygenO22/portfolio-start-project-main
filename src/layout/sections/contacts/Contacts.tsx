@@ -42,7 +42,7 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
   margin-top: 200px;
@@ -86,6 +86,15 @@ const Title = styled.h2`
   @media (${({ theme }) => theme.media.medium}) {
     font-size: 2.6rem;
   }
+
+  @media (${({ theme }) => theme.media.small}) {
+    font-size: 2.2rem;
+  }
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    line-height: 30px;
+    font-size: 1.6rem;
+  }
 `;
 
 const MailText = styled.p`
@@ -96,6 +105,7 @@ const MailText = styled.p`
   background: linear-gradient(to right, #00c0fd, #e70faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 5px;
 
   @media (${({ theme }) => theme.media.large}) {
     font-size: 2.6rem;
@@ -103,6 +113,14 @@ const MailText = styled.p`
 
   @media (${({ theme }) => theme.media.medium}) {
     font-size: 2.6rem;
+  }
+
+  @media (${({ theme }) => theme.media.small}) {
+    font-size: 2.2rem;
+  }
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    font-size: 1.6rem;
   }
 `;
 
@@ -123,15 +141,23 @@ const ContactsWrapper = styled.div`
   border-bottom: 2px solid #666666;
   padding-bottom: 44px;
   margin-bottom: 44px;
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+  }
 `;
 
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 10%;
+  width: 15%;
 
-  @media (${({ theme }) => theme.media.small}) {
+  @media (${({ theme }) => theme.media.extraSmall}) {
     display: none;
   }
 `;
@@ -140,7 +166,7 @@ const ContactsInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 80%;
+  width: 70%;
   margin-right: 40px;
   gap: 33px;
 
@@ -158,6 +184,17 @@ const ContactsInfo = styled.div`
     justify-content: flex-start;
     margin: 0 40px;
     gap: 0;
+  }
+
+  @media (${({ theme }) => theme.media.medium}) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 20px;
+  }
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    margin: 0 0 40px 0;
   }
 `;
 
@@ -179,6 +216,14 @@ const MenuWrapper = styled.div`
 
   @media (${({ theme }) => theme.media.medium}) {
     margin-right: 0;
+  }
+
+  @media (${({ theme }) => theme.media.small}) {
+    gap: 30px;
+  }
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    display: none;
   }
 `;
 

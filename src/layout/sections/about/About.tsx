@@ -63,7 +63,6 @@ const InfoColumn = styled.div`
   align-items: flex-start;
   width: 100%;
   max-width: 700px;
-  height: 100%;
 `;
 
 const StyledArticle = styled.article`

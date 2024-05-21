@@ -25,7 +25,7 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   position: sticky;
-  top: 70px;
+  top: 0;
   left: 0;
   z-index: 3;
   display: flex;
@@ -42,12 +42,10 @@ const StyledHeader = styled.header`
   padding: 5px;
 
   @media (${({ theme }) => theme.media.small}) {
-    top: 20px;
     margin-top: 20px;
   }
 
   @media (${({ theme }) => theme.mediaHeight.small}) {
-    top: 20px;
     margin-top: 20px;
   }
 `;

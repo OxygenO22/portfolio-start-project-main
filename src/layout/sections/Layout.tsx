@@ -29,7 +29,7 @@ const StyledLayout = styled.div<StyledLayoutPropsType>`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
 
   ${(props) =>

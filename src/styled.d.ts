@@ -6,6 +6,7 @@ interface ITheme {
     large: string
     medium: string
     small: string
+    extraSmall: string
   },
 
   mediaHeight: {
@@ -19,6 +20,7 @@ declare module 'styled-components' {
       large: string
       medium: string
       small: string
+      extraSmall: string
     },
 
     mediaHeight: {

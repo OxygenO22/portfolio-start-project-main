@@ -32,12 +32,14 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
-  @media (${({theme}) => theme.media.medium}) {
+  @media (${({ theme }) => theme.media.medium}) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
+    height: 100%;
   }
 `;
 
@@ -69,6 +71,10 @@ const StyledTitle = styled.h2`
   @media (${({ theme }) => theme.mediaHeight.small}) {
     font-size: 2.6rem;
     line-height: 50px;
+  }
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    font-size: 1.8rem;
   }
 `;
 
