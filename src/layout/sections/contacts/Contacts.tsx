@@ -10,7 +10,7 @@ export const Contacts = () => {
     <StyledSection>
       <StyledMailArticle>
         <Title>For any questions please mail me:</Title>
-        <MailText>bamaikoxygeno22@gmail.com</MailText>
+        <MailText title={`bamaikoxygeno22@gmail.com`}>bamaikoxygeno22@gmail.com</MailText>
       </StyledMailArticle>
       <StyledFooterArticle>
         <ContactsWrapper>
@@ -109,10 +109,15 @@ const MailText = styled.p`
   font-size: 3.6rem;
   line-height: 70px;
   letter-spacing: -1px;
+  width: 100%;
+  text-align: center;
   background: linear-gradient(to right, #00c0fd, #e70faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   @media (${({ theme }) => theme.media.large}) {
     font-size: 2.6rem;

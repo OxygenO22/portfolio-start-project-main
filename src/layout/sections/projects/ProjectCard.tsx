@@ -19,26 +19,26 @@ export const ProjectCard = () => {
             <MainTextWrapper>
               <MainText title={data.mainText}>{data.mainText}</MainText>
             </MainTextWrapper>
-            <TechStackTextWrapper>
-              <TechStackText title={data.stackText}>
-                <TechStackTextSpan>{data.stackSpanText}</TechStackTextSpan>{" "}
-                {data.stackText}
-              </TechStackText>
-            </TechStackTextWrapper>
-            <LinkBlockWrapper>
-              <LinkWrapper>
-                <ChainSvg />
-                <StyledLink href={data.chainLink} target="_blank">
-                  <LinkText>{data.chainLinkText}</LinkText>
-                </StyledLink>
-              </LinkWrapper>
-              <LinkWrapper>
-                <GitHubSvg />
-                <StyledLink href={data.githubLink} target="_blank">
-                  <LinkText>{data.githubLinkText}</LinkText>
-                </StyledLink>
-              </LinkWrapper>
-            </LinkBlockWrapper>
+              <TechStackTextWrapper>
+                <TechStackText title={data.stackText}>
+                  <TechStackTextSpan>{data.stackSpanText}</TechStackTextSpan>{" "}
+                  {data.stackText}
+                </TechStackText>
+              </TechStackTextWrapper>
+              <LinkBlockWrapper>
+                <LinkWrapper>
+                  <ChainSvg />
+                  <StyledLink href={data.chainLink} target="_blank">
+                    <LinkText>{data.chainLinkText}</LinkText>
+                  </StyledLink>
+                </LinkWrapper>
+                <LinkWrapper>
+                  <GitHubSvg />
+                  <StyledLink href={data.githubLink} target="_blank">
+                    <LinkText>{data.githubLinkText}</LinkText>
+                  </StyledLink>
+                </LinkWrapper>
+              </LinkBlockWrapper>
           </ContentWrapper>
         </StyledArticle>
       ))}
@@ -52,6 +52,7 @@ const StyledArticle = styled.article`
   align-items: center;
   justify-content: flex-start;
   width: 375px;
+  min-height: 540px;
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -109,6 +110,7 @@ const Title = styled.h3`
 const MainTextWrapper = styled(TitleWrapper)`
   justify-content: flex-start;
   margin-bottom: 12px;
+  min-height: 110px;
 `;
 
 const MainText = styled.p`
