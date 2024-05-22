@@ -14,13 +14,13 @@ export const ProjectCard = () => {
           </PictureWrapper>
           <ContentWrapper>
             <TitleWrapper>
-              <Title>{data.title}</Title>
+              <Title title={data.title}>{data.title}</Title>
             </TitleWrapper>
             <MainTextWrapper>
-              <MainText>{data.mainText}</MainText>
+              <MainText title={data.mainText}>{data.mainText}</MainText>
             </MainTextWrapper>
             <TechStackTextWrapper>
-              <TechStackText>
+              <TechStackText title={data.stackText}>
                 <TechStackTextSpan>{data.stackSpanText}</TechStackTextSpan>{" "}
                 {data.stackText}
               </TechStackText>
@@ -92,7 +92,7 @@ const TitleWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
 `
 
 const Title = styled.h3`
@@ -100,7 +100,11 @@ const Title = styled.h3`
   font-size: 1.75rem;
   line-height: 26px;
   color: #000;
-`
+  padding-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
 
 const MainTextWrapper = styled(TitleWrapper)`
   justify-content: flex-start;
@@ -112,6 +116,10 @@ const MainText = styled.p`
   font-size: 1.12rem;
   line-height: 26px;
   color: #666666;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 `;
 
 const TechStackTextWrapper = styled(TitleWrapper)`
@@ -121,9 +129,12 @@ const TechStackTextWrapper = styled(TitleWrapper)`
 
 const TechStackText = styled.p`
   font-weight: 300;
-  font-size: .87rem;
+  font-size: 0.87rem;
   line-height: 26px;
   color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 const TechStackTextSpan = styled.span`
