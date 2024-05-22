@@ -17,7 +17,7 @@ export const AboutExperienceItem = (props: AboutExperienceItemPropsType) => {
   return (
     <ItemWrapper>
       <Row>
-        <Title>{props.title}</Title>
+        <Title title={props.title}>{props.title}</Title>
         <ClassTypeBody>
           <ClassTypeText>{props.classesType}</ClassTypeText>
         </ClassTypeBody>
@@ -76,6 +76,10 @@ const Title = styled.h3`
   line-height: 28px;
   letter-spacing: 1px;
   color: #a7a7a7;
+  width: calc(100% - 84px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 const ClassTypeBody = styled.div`
@@ -117,6 +121,12 @@ const TextWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 45%;
-`
+
+  @media (${({ theme }) => theme.media.extraSmall}) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+`;
 
 

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import photo from "../../../assets/images/pictures/AlexPhoto.webp";
 import photoBackground from '../../../assets/images/svg/photo-background.svg'
+import { Linkedin } from '../../../constants/Constants';
 
 export const Main = () => {
   return (
@@ -10,14 +11,11 @@ export const Main = () => {
         <StyledTitle>Hi 👋,</StyledTitle>
         <StyledTitle> My name is</StyledTitle>
         <StyledTitleName>
-          <TitleNameLink
-            href="https://www.linkedin.com/in/alexandr-budzko-823443218/"
-            target="_blank"
-          >
+          <TitleNameLink href={Linkedin} target="_blank">
             Alex Budzko
           </TitleNameLink>
         </StyledTitleName>
-        <StyledTitle as="h1">I build things for web</StyledTitle>
+        <StyledTitle as="h1">I'm frontend developer</StyledTitle>
       </TextWrapper>
       <MyPhotoWrapper>
         <StyledPhotoBackgr src={photoBackground} alt="Photo background" />

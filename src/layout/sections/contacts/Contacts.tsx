@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SocialMedia } from '../../../components/ui/socialMedia/SocialMedia';
 import { Logo } from '../../../components/ui/logo/Logo';
 import { Menu } from '../../../components/ui/menu/Menu';
+import { Linkedin } from '../../../constants/Constants';
 
 export const Contacts = () => {
   return (
@@ -17,10 +18,10 @@ export const Contacts = () => {
             <Logo place="Footer" />
           </LogoWrapper>
           <ContactsInfo>
-              <ContactsLink href="tel:+375(29)281-68-71" target="_blank">
-                <ContactsText>+375(29)281-68-71</ContactsText>
-              </ContactsLink>
-              <ContactsText>bamaikoxygeno22@gmail.com</ContactsText>
+            <ContactsLink href="tel:+375(29)281-68-71" target="_blank">
+              <ContactsText>+375(29)281-68-71</ContactsText>
+            </ContactsLink>
+            <ContactsText>bamaikoxygeno22@gmail.com</ContactsText>
           </ContactsInfo>
           <SocialMedia />
         </ContactsWrapper>
@@ -29,8 +30,14 @@ export const Contacts = () => {
             <Menu place="Footer" />
           </MenuWrapper>
           <ContactsText>
-            Designed and built by <ColoredSpan>Alex Budzko</ColoredSpan> with{" "}
-            <ColoredSpan>Love</ColoredSpan> & <ColoredSpan>Coffee</ColoredSpan>
+            Designed and built by{" "}
+            <ColoredSpan>
+              <a href={Linkedin} target="_blank">
+                Alex Budzko
+              </a>
+            </ColoredSpan>{" "}
+            with <ColoredSpan>Love</ColoredSpan> &{" "}
+            <ColoredSpan>Coffee</ColoredSpan>
           </ContactsText>
         </NavigationWrapper>
       </StyledFooterArticle>
